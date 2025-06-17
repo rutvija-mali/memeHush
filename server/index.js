@@ -14,7 +14,18 @@ const io = new Server(server, { cors: { origin: '*' } });
 
 initSocket(io);
 
-app.use(cors());
+const cors = require('cors');
+
+const allowedOrigins = [
+  'https://meme-hush-qw2t8dnkn-rutvija-malis-projects.vercel.app', 
+  'http://localhost:5173'  
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 app.use(express.json());
 
 app.use('/memes', memeRoutes);
