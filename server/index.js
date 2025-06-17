@@ -14,7 +14,6 @@ const io = new Server(server, { cors: { origin: '*' } });
 
 initSocket(io);
 
-const cors = require('cors');
 
 const allowedOrigins = [
   'https://meme-hush-qw2t8dnkn-rutvija-malis-projects.vercel.app', 
