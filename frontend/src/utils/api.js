@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = 'http://localhost:5000';
+const API = 'https://memehush.onrender.com';
 
 export const getMemes = async () => {
   const res = await axios.get(`${API}/memes`);
